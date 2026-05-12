@@ -1,0 +1,233 @@
+@tailwind base;
+@tailwind utilities;
+@tailwind components;
+
+/* Custom styles for better mobile layout */
+@layer components {
+  /* Main container improvements - FIXED gradient colors */
+  .dashboard-container {
+    @apply min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 p-3 w-full;
+  }
+
+  /* Header improvements */
+  .dashboard-header {
+    @apply bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl shadow-xl p-4 mb-4 text-white w-full;
+  }
+
+  /* Full width container for main content */
+  .main-content-container {
+    @apply w-full max-w-none;
+  }
+
+  /* Button grid improvements for mobile */
+  .view-buttons-grid {
+    @apply flex flex-col sm:flex-row gap-2 mb-4 w-full;
+  }
+
+  .view-button {
+    @apply flex-1 py-3 px-4 rounded-xl font-bold transition flex items-center justify-center gap-2 text-sm sm:text-base w-full;
+  }
+
+  /* Group cards improvements */
+  .groups-grid {
+    @apply grid grid-cols-1 gap-3 w-full;
+  }
+
+  .group-card {
+    @apply bg-white p-4 rounded-xl shadow-md hover:shadow-xl transition cursor-pointer border-2 border-transparent hover:border-indigo-300 w-full;
+  }
+
+  /* Activity feed improvements */
+  .activity-feed {
+    @apply bg-white rounded-xl shadow-md w-full;
+    max-height: 70vh;
+    overflow-y: auto;
+  }
+
+  .activity-item {
+    @apply bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-4 border-l-4 border-blue-600 shadow-sm mb-3 w-full;
+  }
+
+  /* Input and form improvements */
+  .chat-input-container {
+    @apply p-3 border-t border-gray-200 bg-gray-50 w-full;
+  }
+
+  .chat-input {
+    @apply flex-1 p-3 border-2 border-gray-300 rounded-lg focus:border-indigo-500 focus:outline-none text-base w-full;
+  }
+
+  /* Modal improvements for mobile */
+  .modal-overlay {
+    @apply fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center p-3 z-50 w-full;
+  }
+
+  .modal-container {
+    @apply bg-white rounded-2xl p-4 w-full max-w-md mx-auto shadow-2xl;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+
+  /* Expense form modal - wider on mobile */
+  .expense-modal-container {
+    @apply bg-white rounded-2xl p-4 w-full mx-auto shadow-2xl;
+    max-height: 90vh;
+    overflow-y: auto;
+    width: 95vw;
+  }
+
+  /* Analytics modal improvements */
+  .analytics-modal {
+    @apply bg-white rounded-2xl p-4 w-full mx-auto shadow-2xl;
+    max-height: 95vh;
+    overflow-y: auto;
+    width: 95vw;
+  }
+
+  /* Settlement cards improvements */
+  .settlement-card {
+    @apply bg-white p-4 rounded-xl shadow-md border-2 mb-3 w-full;
+  }
+
+  /* Button sizing improvements */
+  .btn-primary {
+    @apply px-4 py-3 rounded-xl font-semibold text-base w-full;
+  }
+
+  .btn-large {
+    @apply px-6 py-4 rounded-xl font-bold text-lg w-full;
+  }
+
+  /* Text sizing improvements for mobile */
+  .text-mobile-lg {
+    @apply text-lg font-bold;
+  }
+
+  .text-mobile-xl {
+    @apply text-xl font-bold;
+  }
+
+  .text-mobile-2xl {
+    @apply text-2xl font-bold;
+  }
+
+  /* Grid improvements for smaller screens */
+  @media (max-width: 640px) {
+    .dashboard-container {
+      @apply p-4; /* More padding on mobile */
+    }
+    
+    .expense-modal-container {
+      max-width: 98vw;
+      width: 98vw;
+    }
+    
+    .analytics-modal {
+      max-width: 98vw;
+      width: 98vw;
+    }
+    
+    .groups-grid {
+      gap: 3;
+    }
+    
+    .group-card {
+      padding: 1.5rem; /* More padding on mobile */
+    }
+
+    .view-buttons-grid {
+      @apply gap-3; /* More gap between buttons */
+    }
+  }
+
+  /* Better spacing for mobile */
+  .mobile-spacing {
+    @apply space-y-4; /* Increased spacing */
+  }
+
+  /* Improved form elements */
+  .form-input {
+    @apply w-full p-4 border-2 border-gray-300 rounded-lg focus:border-indigo-500 focus:outline-none text-base mb-4; /* Increased padding */
+  }
+
+  .form-label {
+    @apply block text-sm font-semibold text-gray-700 mb-3; /* Increased margin */
+  }
+
+  /* Custom scrollbar for better mobile experience */
+  .custom-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: #c7d2fe #f1f5f9;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: #f1f5f9;
+    border-radius: 10px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #c7d2fe;
+    border-radius: 10px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #a5b4fc;
+  }
+
+  /* Full width utility classes */
+  .full-width {
+    @apply w-full max-w-none;
+  }
+
+  .container-expand {
+    @apply w-screen -mx-4; /* Expand beyond parent container */
+  }
+}
+
+/* Additional utility classes for specific components */
+@layer utilities {
+  .min-h-safe-screen {
+    min-height: calc(100vh - 2rem);
+  }
+  
+  .max-w-mobile {
+    max-width: 98vw;
+  }
+  
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .w-screen-full {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+  }
+}
+
+/* Global container fixes */
+.container {
+  @apply max-w-none !important; /* Remove max-width restrictions */
+}
+
+/* Ensure full width on all screen sizes */
+@media (min-width: 640px) {
+  .sm\:w-full {
+    width: 100% !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .md\:w-full {
+    width: 100% !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:w-full {
+    width: 100% !important;
+  }
+}
