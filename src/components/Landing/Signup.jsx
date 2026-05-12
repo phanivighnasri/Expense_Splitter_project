@@ -314,11 +314,11 @@ export default function Signup() {
               />
               <label className="terms-label">
                 I agree to the{" "}
-                <a href="#" className="terms-link">
+                <a href="/" className="terms-link">
                   Terms of Service
                 </a>{" "}
                 and{" "}
-                <a href="#" className="terms-link">
+                <a href="/" className="terms-link">
                   Privacy Policy
                 </a>
               </label>

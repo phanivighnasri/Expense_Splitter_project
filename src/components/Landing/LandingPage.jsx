@@ -76,10 +76,10 @@ const Landing = () => {
       <footer>
         <p>&copy; 2025 Expense Splitter | All Rights Reserved</p>
         <div className="social-icons">
-          <a href="#"><FaFacebook /></a>
-          <a href="#"><FaTwitter /></a>
-          <a href="#"><FaInstagram /></a>
-          <a href="#"><FaGithub /></a>
+          <a href="/"><FaFacebook /></a>
+          <a href="/"><FaTwitter /></a>
+          <a href="/"><FaInstagram /></a>
+          <a href="/"><FaGithub /></a>
         </div>
       </footer>
     </div>

@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import "./Dashboard.css";
-import { Users, Plus, DollarSign, Send, CheckCircle, X, AlertCircle, Receipt, Clock, Check, XCircle, MessageCircle, Percent, Wallet, CreditCard, BarChart3 } from 'lucide-react';
+import { Users, Plus, Send, CheckCircle, X, AlertCircle, Receipt, Clock, Check, XCircle, MessageCircle, Percent, Wallet, CreditCard, BarChart3 } from 'lucide-react';
 import { Chart, registerables } from 'chart.js';
 Chart.register(...registerables);
 
